@@ -8,7 +8,7 @@ pipeline {
     stage ('Build image') {
       steps {
         sh "docker build -t varidmahdi/laravel_cilsy:latest ."
-        sh "docker push"
+        sh "docker push varidmahdi/laravel_cilsy:latest"
         sh "docker rmi varidmahdi/laravel_cilsy:latest"
       }
     }
